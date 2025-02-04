@@ -8,18 +8,13 @@ public class UnitOfWork : IUnitOfWork
     private readonly ApplicationDbContext _context;
     public IUserRepository UserRepository { get; }
     public IMessageRepository MessageRepository { get; }
-    public IGroupRepository GroupRepository { get; }
     public IConversationRepository ConversationRepository { get; }
-    public IUserConversationRepository UserConversationRepository { get; }
-    
-    public UnitOfWork( ApplicationDbContext context, IUserRepository userRepository, IMessageRepository messageRepository, IGroupRepository groupRepository, IConversationRepository conversationRepository, IUserConversationRepository userConversationRepository)
+    public UnitOfWork( ApplicationDbContext context, IUserRepository userRepository, IMessageRepository messageRepository, IConversationRepository conversationRepository)
     {
         _context = context;
         UserRepository = userRepository;
         MessageRepository = messageRepository;
-        GroupRepository = groupRepository;
         ConversationRepository = conversationRepository;
-        UserConversationRepository = userConversationRepository;
     }
     
     public async Task<int> SaveChanges()

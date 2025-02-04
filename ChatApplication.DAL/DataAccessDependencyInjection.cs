@@ -20,9 +20,7 @@ public static class DataAccessDependencyInjection
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IMessageRepository, MessageRepository>();
-        services.AddScoped<IGroupRepository, GroupRepository>();
         services.AddScoped<IConversationRepository, ConversationRepository>();
-        services.AddScoped<IUserConversationRepository, UserConversationRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
     }
 }

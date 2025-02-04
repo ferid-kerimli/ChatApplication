@@ -3,10 +3,9 @@
 public class Conversation
 {
     public int Id { get; set; }
-    public string Name { get; set; } = string.Empty;
-    public bool IsGroup { get; set; } = false;
+    public int User1Id { get; set; }
+    public int User2Id { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    
-    public ICollection<User>? Participants { get; set; }
+
     public ICollection<Message>? Messages { get; set; }
 }

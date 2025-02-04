@@ -1,5 +1,6 @@
 using System.Text;
 using ChatApplication.BLL;
+using ChatApplication.BLL.Utility;
 using ChatApplication.DAL;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -58,6 +59,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.MapHub<ChatHub>("/chathub");
 
 app.UseHttpsRedirection();
 

@@ -7,8 +7,6 @@ public class Message
     public int ConversationId { get; set; }
     public string Content { get; set; } = string.Empty;
     public DateTime SentAt { get; set; } = DateTime.UtcNow;
-    public bool IsRead { get; set; } = false;
-
-    public User? Sender { get; set; }
+    
     public Conversation? Conversation { get; set; }
 }

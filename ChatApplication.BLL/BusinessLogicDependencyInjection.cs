@@ -11,5 +11,6 @@ public static class BusinessLogicDependencyInjection
     {
         services.AddScoped<IAuthenticationService, AuthenticationService>();
         services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IMessageService, MessageService>();
     }
 }
