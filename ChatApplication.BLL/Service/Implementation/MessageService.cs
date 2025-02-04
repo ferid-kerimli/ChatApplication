@@ -31,7 +31,6 @@ public class MessageService : IMessageService
             return response;
         }
         
-
         var message = new Message
         {
             SenderId = dto.SenderId,
@@ -42,8 +41,6 @@ public class MessageService : IMessageService
 
         await _unitOfWork.MessageRepository.Create(message);
         await _unitOfWork.SaveChanges();
-
-        var messageDto = new MessageDto(message);
 
         await _hubContext.Clients.Group($"conversation_{dto.ConversationId}")
             .SendAsync("ReceiveMessage", dto.SenderId, dto.Content, DateTime.UtcNow);
