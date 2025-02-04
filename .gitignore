@@ -1,0 +1,15 @@
+# API
+ChatApplication.API/bin
+ChatApplication.API/obj
+
+# BLL
+ChatApplication.BLL/bin
+ChatApplication.BLL/obj
+
+# DAL
+ChatApplication.DAL/bin
+ChatApplication.DAL/obj
+ChatApplication.DAL/Migrations
+
+.idea
+ChatApplication.sln.DotSettings
